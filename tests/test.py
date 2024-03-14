@@ -68,6 +68,7 @@ try:
         })
 
     print(results_list)
+    print("printed the 1st page products")
 
 finally:
     # Stop the driver
