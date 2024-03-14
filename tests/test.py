@@ -52,7 +52,7 @@ try:
             )
 
 
-
+    time.sleep(5)
     #data of each product on page 1
     product_names = driver.find_elements(By.CLASS_NAME, "_4rR01T")
     display_prices = driver.find_elements(By.CLASS_NAME, "_30jeq3")
