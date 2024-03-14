@@ -7,8 +7,12 @@ platforms:
     browserVersion: 121.0
   - os: Windows
     osVersion: 11
-    browserName: Chrome
-    browserVersion: 122.0
+    browserName: Edge
+    browserVersion: 121.0
+  - os: Windows
+    osVersion: 11
+    browserName: Firefox
+    browserVersion: 121.0
   - os: OS X
     osVersion: Monterey
     browserName: Safari
