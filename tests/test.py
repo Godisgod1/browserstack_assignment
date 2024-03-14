@@ -40,7 +40,7 @@ try:
     #Click on assured
     time.sleep(3)
     WebDriverWait(driver, 10).until(EC.visibility_of_element_located(
-        (By.XPATH,'//div[@class="_U-Vxu"]'))).click()
+        (By.XPATH,'//div[@class="_3U-Vxu"]'))).click()
     
     # high ---> low
     time.sleep(3)
