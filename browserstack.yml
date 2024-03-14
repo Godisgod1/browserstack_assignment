@@ -1,22 +1,26 @@
-userName: pratik_8AzaZl
-accessKey: Qw3jGitr793nop2yQYVN
+userName: pratikkithani_0phDEZ
+accessKey: QPJBm47fb9LG3z7GpHGG
 platforms:
+  - os: Windows
+    osVersion: 10
+    browserName: Firefox
+    browserVersion: 120.0
   - os: Windows
     osVersion: 10
     browserName: Chrome
     browserVersion: 121.0
   - os: Windows
     osVersion: 11
-    browserName: Edge
-    browserVersion: 121.0
+    browserName: Chrome
+    browserVersion: 122.0
   - os: Windows
     osVersion: 11
-    browserName: Firefox
+    browserName: Edge
     browserVersion: 121.0
   - os: OS X
-    osVersion: Monterey
+    osVersion: Big Sur
     browserName: Safari
-    browserVersion: 15.6
+    browserVersion: 14.1
 browserstackLocal: true
 buildName: browserstack-build-1
 projectName: BrowserStack Sample

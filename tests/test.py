@@ -23,6 +23,7 @@ try:
     # driver.maximize_window()
 
     # Search for the product
+    time.sleep(2)
     search_box = driver.find_element(By.NAME, "q")
     search_box.send_keys("Samsung Galaxy S10")
     search_box.send_keys(Keys.RETURN)
@@ -51,7 +52,6 @@ try:
             'browserstack_executor: {"action": "setSessionStatus", "arguments": {"status":"passed", "reason": "All Work is Done"}}'
             )
 
-
     time.sleep(5)
     #data of each product on page 1
     product_names = driver.find_elements(By.CLASS_NAME, "_4rR01T")
@@ -68,7 +68,6 @@ try:
         })
 
     print(results_list)
-    print("done")
 
 finally:
     # Stop the driver
