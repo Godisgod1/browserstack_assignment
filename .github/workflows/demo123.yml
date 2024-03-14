@@ -25,4 +25,4 @@ jobs:
         pip install selenium
 
     - name: Run Selenium tests
-      run: python path/to/your/test.py
+      run: python tests/test.py
