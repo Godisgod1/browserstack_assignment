@@ -68,7 +68,6 @@ try:
         })
 
     print(results_list)
-    print("done with jenkins")
 
 finally:
     # Stop the driver
