@@ -66,7 +66,7 @@ try:
             "Display Price": display_prices[i].text,
             "Link to Product Details Page": product_links[i].get_attribute("href")
         })
-
+        
     print(results_list)
 
 finally:
