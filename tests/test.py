@@ -1,21 +1,19 @@
 import json
 import time
-from typing import KeysView
 from selenium import webdriver
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
-from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.chrome.options import Options as ChromeOptions
-from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.common.keys import Keys
 
-#browserstack-sdk python pytest -n 3 ./tests/test.py
+#browserstack-sdk python ./tests/test.py
 #env\Scripts\activate
 
 
+
 options = ChromeOptions()
-# options.set_capability('BStack Sample Test')
+options.set_capability('sessionName', 'BStack Sample Test')
 driver = webdriver.Chrome(options=options)
 
 try:
