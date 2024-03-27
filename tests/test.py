@@ -66,6 +66,7 @@ try:
         })
         
     print(results_list)
+    print("done succesfully")
 
 finally:
     # Stop the driver

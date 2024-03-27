@@ -52,7 +52,7 @@ def run_test(driver):
         print(result)
     driver.quit()
 
-# Run the test on BrowserStack in parallel
+
 try:
     for i in range(1):  # Number of parallels
         driver = webdriver.Chrome()
