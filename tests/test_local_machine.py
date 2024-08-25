@@ -38,6 +38,7 @@ def run_test(driver):
         (By.XPATH,"//div[text()='Price -- High to Low']"))).click()
     
 
+    time.sleep(5)
     #data of each product on page 1
     product_names = driver.find_elements(By.CLASS_NAME, "KzDlHZ")
     display_prices = driver.find_elements(By.CLASS_NAME, "hl05eU")
