@@ -29,7 +29,8 @@ try:
     # Click on "Mobiles" in categories
     time.sleep(5)
     WebDriverWait(driver, 10).until(EC.visibility_of_element_located(
-        (By.XPATH, '//a[@class="_1jJQdf _2Mji8F"]'))).click()
+        (By.XPATH, '//a[@class="hEjLuS WyLc0s"]'))).click()
+    
     
     time.sleep(3)
     # Click on "samsung"
@@ -39,7 +40,7 @@ try:
     #Click on assured
     time.sleep(3)
     WebDriverWait(driver, 10).until(EC.visibility_of_element_located(
-        (By.XPATH,'//div[@class="_3U-Vxu"]'))).click()
+        (By.XPATH,'//div[@class="SwtzWS"]'))).click()
     
     # high ---> low
     time.sleep(3)
@@ -52,9 +53,9 @@ try:
 
     time.sleep(5)
     #data of each product on page 1
-    product_names = driver.find_elements(By.CLASS_NAME, "_4rR01T")
-    display_prices = driver.find_elements(By.CLASS_NAME, "_30jeq3")
-    product_links = driver.find_elements(By.CLASS_NAME, "_1fQZEK")
+    product_names = driver.find_elements(By.CLASS_NAME, "KzDlHZ")
+    display_prices = driver.find_elements(By.CLASS_NAME, "hl05eU")
+    product_links = driver.find_elements(By.CLASS_NAME, "CGtC98")
 
     # Create and print the list
     results_list = []
@@ -66,7 +67,7 @@ try:
         })
         
     print(results_list)
-    print("done succesfully")
+    # print("done succesfully")
 
 finally:
     # Stop the driver

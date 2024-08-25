@@ -1,7 +1,11 @@
-from selenium import webdriver
-from selenium.webdriver.common.keys import Keys
-from selenium.webdriver.common.by import By
+import json
 import time
+from selenium import webdriver
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.common.by import By
+from selenium.webdriver.chrome.options import Options as ChromeOptions
+from selenium.webdriver.common.keys import Keys
 
 # Function to perform the required tasks on flipkart.com
 def run_test(driver):
@@ -13,31 +17,31 @@ def run_test(driver):
     search_box.send_keys("Samsung Galaxy S10")
     search_box.send_keys(Keys.RETURN)
 
-    # Click on "Mobiles" in categories
-    mobiles_category = driver.find_element(By.LINK_TEXT, "Mobiles")
-    mobiles_category.click()
+    time.sleep(5)
+    WebDriverWait(driver, 10).until(EC.visibility_of_element_located(
+        (By.XPATH, '//a[@class="hEjLuS WyLc0s"]'))).click()
+    
+    
+    time.sleep(3)
+    # Click on "samsung"
+    WebDriverWait(driver, 10).until(EC.visibility_of_element_located(
+        (By.XPATH, '//div[text()="SAMSUNG"]'))).click()
 
-    #clicking on samsung
-    time.sleep(2)
-    brand = driver.find_element(By.CLASS_NAME,"_3879cV")
-    time.sleep(2)
-    brand.click()
-
-    #clicking on assured
-    flipkart_assured_filter = driver.find_element(By.CLASS_NAME,"_3U-Vxu")
-    time.sleep(2)
-    flipkart_assured_filter.click()
-
+    #Click on assured
+    time.sleep(3)
+    WebDriverWait(driver, 10).until(EC.visibility_of_element_located(
+        (By.XPATH,'//div[@class="SwtzWS"]'))).click()
+    
     # high ---> low
-    price_high_to_low_option = driver.find_element(By.XPATH, "//div[text()='Price -- High to Low']")
-    time.sleep(2)
-    price_high_to_low_option.click()
-    time.sleep(6)
+    time.sleep(3)
+    WebDriverWait(driver, 10).until(EC.visibility_of_element_located(
+        (By.XPATH,"//div[text()='Price -- High to Low']"))).click()
+    
 
     #data of each product on page 1
-    product_names = driver.find_elements(By.CLASS_NAME, "_4rR01T")
-    display_prices = driver.find_elements(By.CLASS_NAME, "_30jeq3")
-    product_links = driver.find_elements(By.CLASS_NAME, "_1fQZEK")
+    product_names = driver.find_elements(By.CLASS_NAME, "KzDlHZ")
+    display_prices = driver.find_elements(By.CLASS_NAME, "hl05eU")
+    product_links = driver.find_elements(By.CLASS_NAME, "CGtC98")
 
     # Create and print the list
     results_list = []
